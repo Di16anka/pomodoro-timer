@@ -5,10 +5,11 @@ let isStarted = false;
 
 const timerAction = document.querySelector('#pomodoro-time');
 const toStart = document.querySelector('#start');
+const reset = document.querySelector('#reset');
 
 toStart.addEventListener('click', startTimer);
 function startTimer() {
-    if(isStarted==true) {
+    if(!isStarted) {
     isStarted = false;
     toStart.textContent = "stop";
     } else {
@@ -32,6 +33,12 @@ function updateTimer() {
             minutes--;
         }
     }  
+}
+reset.addEventListener('click', resetTime);
+function resetTime() {
+    clearInterval(timer);
+    reset.textContent = "start";
+    timerAction.textContent = "25:00";    
 }
 
 function formatTime(minutes, seconds) {
