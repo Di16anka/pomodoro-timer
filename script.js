@@ -10,7 +10,6 @@ const reset = document.querySelector('#reset');
 toStart.addEventListener('click', startTimer);
 function startTimer() {
     if(isStarted) {
-    isStarted = false;
     toStart.textContent = "stop";
     } else {
     isStarted = true;
