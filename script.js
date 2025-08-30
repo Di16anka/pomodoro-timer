@@ -37,7 +37,7 @@ function updateTimer() {
 reset.addEventListener('click', resetTime);
 function resetTime() {
     clearInterval(timer);
-    reset.textContent = "start";
+    toStart.textContent = "start";
     timerAction.textContent = "25:00";    
 }
 
